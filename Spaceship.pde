@@ -28,6 +28,12 @@ public class Spaceship extends Floater
     private void setMyPointDirection(double direction){
       myPointDirection = direction;
     }
+    public double getX(){
+      return myCenterX;
+    }
+    public double getY(){
+      return myCenterY;
+    }
     public void hyperspace(){
       setMyXspeed(0);
       setMyYspeed(0);
