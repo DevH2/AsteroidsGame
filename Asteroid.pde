@@ -21,8 +21,8 @@ public class Asteroid extends Floater{
     xCorners[5] = -5;
     yCorners[5] = 0;
     rotSpeed = (Math.random()*2+0.5);
-    myXspeed = Math.random()*1.65+0.005;
-    myYspeed = Math.random()*1.65+0.005;
+    myXspeed = (Math.random()*1.4+0.005);
+    myYspeed = (Math.random()*1.4+0.005);
     
     
   }
