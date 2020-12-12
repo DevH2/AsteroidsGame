@@ -2,6 +2,7 @@
 Spaceship spaceship;
 Star[] stars = new Star[200];
 ArrayList<Asteroid> asteroids;
+float d;
 public void setup() 
 {
   //your code here
@@ -27,6 +28,11 @@ public void draw()
   for(int i = 0; i<asteroids.size();i++){
     asteroids.get(i).show();
     asteroids.get(i).move();
+    d = dist((float)spaceship.getX(),(float)spaceship.getY(),(float)asteroids.get(i).getX(),(float)asteroids.get(i).getY());
+    if(d<15){
+      asteroids.remove(i);
+    }
+    
   }
   if(asteroids.size()<25){
     asteroids.add(new Asteroid());
