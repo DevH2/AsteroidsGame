@@ -12,7 +12,7 @@ public void setup()
   for(int i = 0; i < stars.length;i++){
     stars[i] = new Star(); 
   }
-  for(int i = 0; i<35;i++){
+  for(int i = 0; i<20;i++){
     asteroids.add(new Asteroid());
   }
 }
@@ -29,12 +29,12 @@ public void draw()
     asteroids.get(i).show();
     asteroids.get(i).move();
     d = dist((float)spaceship.getX(),(float)spaceship.getY(),(float)asteroids.get(i).getX(),(float)asteroids.get(i).getY());
-    if(d<15){
+    if(d<20){
       asteroids.remove(i);
     }
     
   }
-  if(asteroids.size()<25){
+  if(asteroids.size()<12){
     asteroids.add(new Asteroid());
   }
 }
