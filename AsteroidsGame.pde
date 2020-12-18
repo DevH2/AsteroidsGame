@@ -56,8 +56,8 @@ public void draw()
   }
   fill(255);
   text("Score:"+(int)score,50,50);
-  text("X:"+(float)spaceship.getX(),50,70);
-  text("Y:"+(float)spaceship.getY(),50,90);
+  text("X:"+(int)spaceship.getX(),50,70);
+  text("Y:"+(int)spaceship.getY(),50,90);
 }
 public void keyPressed(){
   if(key == '1'){
