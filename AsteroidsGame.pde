@@ -3,7 +3,7 @@ Spaceship spaceship;
 Star[] stars = new Star[200];
 ArrayList<Asteroid> asteroids;
 ArrayList<Bullet> bullets;
-float d,d1;
+float d,d1,score=0;
 public void setup() 
 {
   //your code here
@@ -36,6 +36,7 @@ public void draw()
     }
     for(int k = 0; k<bullets.size();k++){
       if(dist((float)bullets.get(k).getX(),(float)bullets.get(k).getY(),(float)asteroids.get(i).getX(),(float)asteroids.get(i).getY())<20){
+        score++;
         asteroids.remove(i);
         bullets.remove(k);
         break;
@@ -53,6 +54,10 @@ public void draw()
     }
     
   }
+  fill(255);
+  text("Score:"+(int)score,50,50);
+  text("X:"+(float)spaceship.getX(),50,70);
+  text("Y:"+(float)spaceship.getY(),50,90);
 }
 public void keyPressed(){
   if(key == '1'){
